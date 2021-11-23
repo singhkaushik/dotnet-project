@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication1.Models.st_data>
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.st_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.st_class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.st_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.st_Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_state)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.st_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.st_class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.st_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.st_Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_state)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.st_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.st_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.st_id })
+        </td>
+    </tr>
+}
+
+</table>

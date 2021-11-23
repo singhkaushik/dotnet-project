@@ -1,0 +1,66 @@
+﻿@model WebApplication1.Models.st_data
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>st_data</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.st_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.st_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.st_class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.st_class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.st_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.st_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.st_Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.st_Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E_state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E_state)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.st_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
